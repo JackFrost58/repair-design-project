@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "ProximaNova-Regular";
+  src: url(./assets/fonts/ProximaNova-Regular.ttf);
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  color: white;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 83px;
+  background-color: #131313;
+}
+
+.header-navbar {
+  width: 40.5%;
+  margin-top: 2.5%;
+  margin-right: 4.6%;
+}
+
+.header__logo {
+  height: 10px;
+  margin: 2.4% 7% 2.6% 6%;
+  font-family: "ProximaNova-Regular";
+  font-size: 0.4em;
+  text-transform: uppercase;
+  color: #E3B873;
+}
+
+.header__logo h1 {
+  margin: 0;
+}
+
+.header-navbar-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 10px;
+  margin: 0 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-navbar-list__item:last-of-type {
+  margin-right: 0;
+}
+
+.header-navbar-list__item {
+  margin-right: 8%;
+  font-family: "ProximaNova-Regular";
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.header-navbar-list__item:hover {
+  color: #E3B873;
+  cursor: pointer;
+}
+
+.header__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 3%;
+  font-family: "ProximaNova-Regular";
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #E3B873;
+}
+
+.header__link__telephone {
+  color: #E3B873;
+}
+
+.header__button {
+  width: 161px;
+  height: 37px;
+  margin: auto 0;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: #E3B873;
+}
+
+.header__button p {
+  margin: auto 0;
+  font-family: "ProximaNova-Regular";
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.header__button:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.header__button:hover p {
+  color: #E3B873;
+}
+
+.section-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar {
+  width: 82px;
+  background-color: #131313;
+}
+
+.order-wrapper {
+  width: 95%;
+  height: 707px;
+  background-image: url(./assets/img/background-section-order.png);
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,17 @@
+$bg-color-header: #131313;
+$font-header: "ProximaNova-Regular";
+$mobile: 375px;
+$desktop: 1440px;
+$text-color-header: #E3B873;
+
+
+@mixin font($font, $size) {
+    font-family: $font;
+    font-size: $size;
+    text-transform: uppercase;
+}
+
+@mixin flex_column(){
+    display: flex;
+    flex-direction: column;
+}

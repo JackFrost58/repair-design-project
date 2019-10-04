@@ -1,0 +1,15 @@
+.section-order{
+    display: flex;
+    
+}
+
+.sidebar{
+    width: 82px;
+    background-color: $bg-color-header;
+}
+
+.order-wrapper{
+    width: 95%;
+    height: 707px;
+    background-image: url(./assets/img/background-section-order.png);
+}

@@ -1,0 +1,81 @@
+.header{
+    display: flex;
+    height: 83px;
+    background-color: $bg-color-header;
+}
+
+.header-navbar{
+    width: 40.5%;
+    margin-top: 2.5%;
+    margin-right: 4.6%;
+}
+
+
+.header__logo{
+    height: 10px;
+    margin: 2.4% 7% 2.6% 6%;
+    @include font($font-header, 0.4em);
+    color: $text-color-header;
+    h1{
+        margin: 0;
+    }
+}
+
+.header-navbar-list{
+    display: flex;
+    justify-content: space-between;
+    height: 10px;
+    margin: 0 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header-navbar-list__item:last-of-type{
+    margin-right: 0;
+}
+
+.header-navbar-list__item{
+    margin-right: 8%;
+    @include font($font-header, 0.8em);
+
+}
+
+.header-navbar-list__item:hover{
+    color: $text-color-header;
+    cursor: pointer;
+}
+
+.header__link{
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3%;
+    @include font($font-header, 0.9em);
+    color: $text-color-header;
+}
+
+.header__link__telephone{
+    color: $text-color-header;
+}
+
+.header__button{
+    width: 161px;
+    height: 37px;
+    margin: auto 0;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background-color: $text-color-header;
+    p{
+        margin: auto 0;
+        @include font($font-header, 0.9em);
+        color: #ffffff;
+    }
+}
+
+.header__button:hover{
+    background-color: #ffffff;
+    cursor: pointer;
+    p{
+        color: $text-color-header;
+    }
+}
