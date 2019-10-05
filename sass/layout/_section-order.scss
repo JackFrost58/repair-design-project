@@ -1,15 +1,134 @@
 .section-order{
     display: flex;
-    
+    height: 755px;
+    background-color: $main-back-color;
+
+    @media (max-width: $mobile) {
+        width: 100%;
+        height: 476px;
+    }
 }
 
 .sidebar{
     width: 82px;
-    background-color: $bg-color-header;
+    height: 463px;
+    padding-top: 17%;
+    color: $text-color--main;
+    background-color: $main-back-color;
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.sidebar__link{
+    position: relative;
+    display: inline-block;
+    @include font($font-RNR, 1em, $uppercase);
+    color: $text-color--main;
+    text-decoration: none;
+    transform: $rotate_vertical;
+    -moz-transform: $rotate_vertical;
+    -ms-transform: $rotate_vertical; 
+    
+    &:hover{
+        color:$text-color--light;
+    }
+
+    &:after{
+        content: "";
+        position: absolute;
+        top: -16px;
+        left: 119px;
+        display: inline-block;
+        width: 2px;
+        height: 51px;
+        background-color: $text-color--main;
+        transform: $rotate_vertical;
+       
+    }
 }
 
 .order-wrapper{
     width: 95%;
     height: 707px;
     background-image: url(./assets/img/background-section-order.png);
+
+    @media (max-width: $mobile) {
+        width: 100%;
+        height: 391px;
+        padding-top: 23%;
+        background-image: url(./assets/img/background-section-order-mobile.png);
+    }
+}
+
+.order-wrapper__heading{
+    width: 517px;
+    height: 105px;
+    margin: 14.3% 0 3.4% 4.5%;
+    @include font($font-YOR, 2.4em, $uppercase);
+    font-weight: 600;
+    line-height: 53px;
+
+    &:after{
+        content: "Rostov-on-Don";
+        color: $text-color--main;
+    }
+
+    @media (max-width: $mobile) {
+        width: 339px;
+        height: 60px;
+        margin: 4% auto;
+        @include font($font-YOR, 1.5em, $uppercase);
+        font-weight: 400;
+        line-height: 30px;
+    }
+}
+
+.order-wrapper__description{
+    display: inline-block;
+    width: 415px;
+    height: 89px;
+    margin: 0 61% 15px 91px;
+    @include font($font-RNR, 1.2em, none);
+    line-height: 30px;
+
+    @media (max-width: $mobile) {
+       width: 297px;
+       height: 94px;
+       margin: 0 0 9% 5%;
+       @include font($font-RNR, 1em, none);
+       line-height: 24px;
+    }
+}
+
+.scroll-down{
+    position: absolute;
+    bottom: 99px;
+    @include flex_center();
+    width: 247px;
+    height: 97px;
+    background-color: $main-back-color;
+
+    &:hover{
+        color: $text-color--main;
+        text-decoration: underline;
+    }
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.scroll-down__link{
+    @include font($font-YOR, 1em, $uppercase);
+}
+
+.scroll-down__ellipse{
+   @include flex_center();
+    width: 29px;
+    height: 29px;
+    margin-left: 4%;
+    border: 1px solid $text-color--main;
+    border-radius: 25px;
 }

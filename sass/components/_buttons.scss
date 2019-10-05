@@ -1,0 +1,83 @@
+.header__button{
+    width: 161px;
+    height: 37px;
+    margin: auto 0;
+    border: 1px solid $limpid;
+    border-radius: 2px;
+    background-color: $text-color--main;
+    p{
+        margin: auto 0;
+        @include font($font-RNR, 0.9em, $uppercase);
+        color: $text-color--light;
+    }
+
+    &:hover{
+        @include button_hover($limpid);
+        border: 1px solid $text-color--light;
+        p{
+            color: $text-color--main;
+        }
+    }
+
+    @media (max-width: $mobile) {
+       display: none;
+    }
+
+}
+
+.order-wrapper__button{
+    width: 207px;
+    height: 51px;
+    border: 0;
+    border-radius: 2px;
+    background-color: $text-color--main;
+
+    p{
+        margin: auto 0;
+        @include font($font-RNR, 1em, $uppercase);
+        color: $text-color--light;
+    }
+
+    @media (max-width: $mobile) {
+        width: 339px;
+        height: 51px;
+    }
+}
+
+.button-cost{
+    margin-left: 60px;
+    margin-bottom: 159px;
+
+    &:focus{
+        @include button_hover($limpid);
+        border: 1px solid $text-color--light;
+    }
+
+    @media (max-width: $mobile) {
+        margin-left: 4%;
+        margin-bottom:  20px;
+
+        &:focus{
+            background-color: $limpid;
+        }
+    }
+}
+
+.button-submit{
+    margin-left: 1.5%;
+    border: 1px solid $text-color--light;
+    background-color: transparent;
+
+    &:focus{
+        @include button_hover($text-color--main);
+    } 
+    
+    @media (max-width: $mobile) {
+        margin-left: 4%;
+
+        &:focus{
+            background-color: $text-color--main;
+        }
+    }
+}
+

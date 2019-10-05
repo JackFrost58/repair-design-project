@@ -1,17 +1,33 @@
-$bg-color-header: #131313;
-$font-header: "ProximaNova-Regular";
+$main-back-color: #131313;
+$font-RNR: "ProximaNova-Regular";
+$font-YOR: "YesevaOne-Regular", serif;
 $mobile: 375px;
 $desktop: 1440px;
-$text-color-header: #E3B873;
+$text-color--main: #E3B873;
+$text-color--light: #ffffff;
+$rotate-vertical: rotate(90deg);
+$uppercase: uppercase; 
+$limpid: transparent;
 
 
-@mixin font($font, $size) {
+@mixin font($font, $size, $text-transform) {
     font-family: $font;
     font-size: $size;
-    text-transform: uppercase;
+    text-transform: $text-transform;
 }
 
 @mixin flex_column(){
     display: flex;
     flex-direction: column;
+}
+
+@mixin button_hover($back_color){
+    background-color: $back_color;
+    cursor: pointer;
+}
+
+@mixin flex_center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
