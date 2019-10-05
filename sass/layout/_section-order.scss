@@ -22,9 +22,10 @@
 }
 
 .sidebar__link{
+    @include font($font-PNR, 1em, $uppercase);
+
     position: relative;
     display: inline-block;
-    @include font($font-RNR, 1em, $uppercase);
     color: $text-color--main;
     text-decoration: none;
     transform: $rotate_vertical;
@@ -63,10 +64,11 @@
 }
 
 .order-wrapper__heading{
+    @include font($font-YOR, 2.4em, $uppercase);
+
     width: 517px;
     height: 105px;
     margin: 14.3% 0 3.4% 4.5%;
-    @include font($font-YOR, 2.4em, $uppercase);
     font-weight: 600;
     line-height: 53px;
 
@@ -76,36 +78,40 @@
     }
 
     @media (max-width: $mobile) {
+        @include font($font-YOR, 1.5em, $uppercase);
+
         width: 339px;
         height: 60px;
         margin: 4% auto;
-        @include font($font-YOR, 1.5em, $uppercase);
         font-weight: 400;
         line-height: 30px;
     }
 }
 
 .order-wrapper__description{
+    @include font($font-PNR, 1.2em, none);
+
     display: inline-block;
     width: 415px;
     height: 89px;
     margin: 0 61% 15px 91px;
-    @include font($font-RNR, 1.2em, none);
     line-height: 30px;
 
     @media (max-width: $mobile) {
+       @include font($font-PNR, 1em, none);
+
        width: 297px;
        height: 94px;
        margin: 0 0 9% 5%;
-       @include font($font-RNR, 1em, none);
        line-height: 24px;
     }
 }
 
 .scroll-down{
+    @include flex_center();
+
     position: absolute;
     bottom: 99px;
-    @include flex_center();
     width: 247px;
     height: 97px;
     background-color: $main-back-color;
@@ -125,7 +131,8 @@
 }
 
 .scroll-down__ellipse{
-   @include flex_center();
+    @include flex_center();
+
     width: 29px;
     height: 29px;
     margin-left: 4%;

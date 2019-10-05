@@ -7,7 +7,7 @@
     background-color: $text-color--main;
     p{
         margin: auto 0;
-        @include font($font-RNR, 0.9em, $uppercase);
+        @include font($font-PNR, 0.9em, $uppercase);
         color: $text-color--light;
     }
 
@@ -34,7 +34,7 @@
 
     p{
         margin: auto 0;
-        @include font($font-RNR, 1em, $uppercase);
+        @include font($font-PNR, 1em, $uppercase);
         color: $text-color--light;
     }
 
@@ -48,7 +48,7 @@
     margin-left: 60px;
     margin-bottom: 159px;
 
-    &:focus{
+    &:hover{
         @include button_hover($limpid);
         border: 1px solid $text-color--light;
     }
@@ -56,28 +56,66 @@
     @media (max-width: $mobile) {
         margin-left: 4%;
         margin-bottom:  20px;
-
-        &:focus{
-            background-color: $limpid;
-        }
     }
 }
 
 .button-submit{
     margin-left: 1.5%;
     border: 1px solid $text-color--light;
-    background-color: transparent;
+    background-color: $limpid;
 
-    &:focus{
+    &:hover{
         @include button_hover($text-color--main);
     } 
     
     @media (max-width: $mobile) {
         margin-left: 4%;
-
-        &:focus{
-            background-color: $text-color--main;
-        }
     }
 }
 
+.slider__dot{
+    @include size_block(10px, 10px);
+    padding: 0;
+    margin-right: 17px;
+    border: 1px solid $limpid;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    &:hover{
+        background-color: $text-color--light;
+    }
+
+    &:last-of-type{
+        margin-right: 0;
+    }
+}
+
+.slider__dot--active{
+    background-color: $text-color--light;
+}
+
+.slider__arrow-left{
+    @include size_block(41px, 15px);
+
+    margin-top: 2px;
+    border: 1px solid $limpid;
+    background-color: $limpid;
+    background-image: url(./assets/img/arrow-left.png);
+
+    &:hover{
+       @extend %border-button;
+    }
+}
+
+.slider__arrow-right{
+    @include size_block(43px, 15px);
+
+    margin-top: 2px;
+    border: 1px solid $limpid;
+    background-color: $limpid;
+    background-image: url(./assets/img/arrow-right.png);
+
+    &:hover{
+       @extend %border-button;
+    }
+}

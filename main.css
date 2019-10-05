@@ -1,3 +1,25 @@
+.additional-information__city h3, .additional-information__apartment-area h3, .additional-information__repair-time h3, .additional-information__repair-cost h3 {
+  font-family: "Times New Roman", serif;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin: 0;
+  color: #E3B873;
+}
+
+.additional-information__name-city, .additional-information__area, .additional-information__time, .additional-information__cost {
+  width: 94px;
+  height: 42px;
+  font-family: "ProximaNova-Regular";
+  font-size: 0.9em;
+  text-transform: none;
+  display: inline-block;
+  margin-top: 9px;
+}
+
+.slider__arrow-left:hover, .slider__arrow-right:hover {
+  border: 1px solid #E3B873;
+}
+
 @font-face {
   font-family: "ProximaNova-Regular";
   src: url(./assets/fonts/ProximaNova-Regular.ttf);
@@ -69,7 +91,7 @@
   margin-bottom: 159px;
 }
 
-.button-cost:focus {
+.button-cost:hover {
   background-color: transparent;
   cursor: pointer;
   border: 1px solid #ffffff;
@@ -80,9 +102,6 @@
     margin-left: 4%;
     margin-bottom: 20px;
   }
-  .button-cost:focus {
-    background-color: transparent;
-  }
 }
 
 .button-submit {
@@ -91,7 +110,7 @@
   background-color: transparent;
 }
 
-.button-submit:focus {
+.button-submit:hover {
   background-color: #E3B873;
   cursor: pointer;
 }
@@ -100,9 +119,46 @@
   .button-submit {
     margin-left: 4%;
   }
-  .button-submit:focus {
-    background-color: #E3B873;
-  }
+}
+
+.slider__dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  margin-right: 17px;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.slider__dot:hover {
+  background-color: #ffffff;
+}
+
+.slider__dot:last-of-type {
+  margin-right: 0;
+}
+
+.slider__dot--active {
+  background-color: #ffffff;
+}
+
+.slider__arrow-left {
+  width: 41px;
+  height: 15px;
+  margin-top: 2px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  background-image: url(./assets/img/arrow-left.png);
+}
+
+.slider__arrow-right {
+  width: 43px;
+  height: 15px;
+  margin-top: 2px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  background-image: url(./assets/img/arrow-right.png);
 }
 
 body {
@@ -215,12 +271,12 @@ body {
   color: #E3B873;
 }
 
-.header__link__telephone {
+.header__telephone {
   color: #E3B873;
 }
 
 @media (max-width: 375px) {
-  .header__link__telephone {
+  .header__telephone {
     color: #ffffff;
     text-decoration: none;
   }
@@ -256,11 +312,11 @@ body {
 }
 
 .sidebar__link {
-  position: relative;
-  display: inline-block;
   font-family: "ProximaNova-Regular";
   font-size: 1em;
   text-transform: uppercase;
+  position: relative;
+  display: inline-block;
   color: #E3B873;
   text-decoration: none;
   -webkit-transform: rotate(90deg);
@@ -302,12 +358,12 @@ body {
 }
 
 .order-wrapper__heading {
-  width: 517px;
-  height: 105px;
-  margin: 14.3% 0 3.4% 4.5%;
   font-family: "YesevaOne-Regular", serif;
   font-size: 2.4em;
   text-transform: uppercase;
+  width: 517px;
+  height: 105px;
+  margin: 14.3% 0 3.4% 4.5%;
   font-weight: 600;
   line-height: 53px;
 }
@@ -319,43 +375,41 @@ body {
 
 @media (max-width: 375px) {
   .order-wrapper__heading {
-    width: 339px;
-    height: 60px;
-    margin: 4% auto;
     font-family: "YesevaOne-Regular", serif;
     font-size: 1.5em;
     text-transform: uppercase;
+    width: 339px;
+    height: 60px;
+    margin: 4% auto;
     font-weight: 400;
     line-height: 30px;
   }
 }
 
 .order-wrapper__description {
+  font-family: "ProximaNova-Regular";
+  font-size: 1.2em;
+  text-transform: none;
   display: inline-block;
   width: 415px;
   height: 89px;
   margin: 0 61% 15px 91px;
-  font-family: "ProximaNova-Regular";
-  font-size: 1.2em;
-  text-transform: none;
   line-height: 30px;
 }
 
 @media (max-width: 375px) {
   .order-wrapper__description {
-    width: 297px;
-    height: 94px;
-    margin: 0 0 9% 5%;
     font-family: "ProximaNova-Regular";
     font-size: 1em;
     text-transform: none;
+    width: 297px;
+    height: 94px;
+    margin: 0 0 9% 5%;
     line-height: 24px;
   }
 }
 
 .scroll-down {
-  position: absolute;
-  bottom: 99px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,6 +419,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  bottom: 99px;
   width: 247px;
   height: 97px;
   background-color: #131313;
@@ -402,5 +458,100 @@ body {
   margin-left: 4%;
   border: 1px solid #E3B873;
   border-radius: 25px;
+}
+
+.section-completed-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 667px;
+  border-top: 1px solid red;
+  background-color: #131313;
+}
+
+.description-project {
+  width: 36.5%;
+  height: 550px;
+  margin-left: 5.5%;
+  padding-top: 8%;
+}
+
+.description-project__heading {
+  position: relative;
+  width: 164px;
+  height: 66px;
+  margin-top: 0;
+  margin-bottom: 34px;
+  font-size: 1.7em;
+  color: #E3B873;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+}
+
+.description-project__heading:after {
+  content: "";
+  position: absolute;
+  top: 45px;
+  left: 150px;
+  display: inline-block;
+  width: 54%;
+  height: 1px;
+  background-color: #E3B873;
+}
+
+.description-project__info {
+  font-family: "ProximaNova-Regular";
+  font-size: 1em;
+  text-transform: none;
+  width: 81%;
+  height: 68px;
+  display: inline-block;
+  margin-bottom: 42px;
+  line-height: 23px;
+}
+
+.additional-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.additional-information__city {
+  width: 155px;
+  height: 58px;
+}
+
+.additional-information__apartment-area {
+  width: 205px;
+  height: 52px;
+  margin-right: 7%;
+  margin-left: 6%;
+}
+
+.additional-information__repair-time {
+  width: 150px;
+  height: 55px;
+  margin-top: 34px;
+  margin-right: 32px;
+}
+
+.additional-information__repair-cost {
+  width: 209px;
+  height: 55px;
+  margin-top: 34px;
+  margin-bottom: 79px;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider__dots {
+  margin: 0 30px;
+  padding-bottom: 1px;
 }
 /*# sourceMappingURL=main.css.map */

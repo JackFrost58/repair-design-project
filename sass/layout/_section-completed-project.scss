@@ -1,0 +1,114 @@
+.section-completed-project{
+    display: flex;
+    height: 667px;
+    border-top: 1px solid red;
+    background-color: $main-back-color;
+}
+
+.description-project{
+    @include size_block(36.5%, 550px);
+
+    margin-left: 5.5%;
+    padding-top: 8%;
+}
+
+
+.description-project__heading{
+    position: relative;
+    width: 164px;
+    height: 66px;
+    margin-top: 0;
+    margin-bottom: 34px;
+    font-size: 1.7em;
+    color: $text-color--main;
+    letter-spacing: -1.5px;
+    text-transform: $uppercase;
+
+    &:after{
+        content: "";
+        position: absolute;
+        top: 45px;
+        left: 150px;
+        display: inline-block;
+        width: 54%;
+        height: 1px;
+        background-color: $text-color--main;
+    }
+}
+
+.description-project__info{
+    @include font($font-PNR, 1em, none);
+    @include size_block(81%, 68px);
+
+    display: inline-block;
+    margin-bottom: 42px;
+    line-height: 23px;
+}
+
+.additional-information{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.additional-information__city{
+    @include size_block(155px, 58px);
+
+    h3{
+       @extend %heading;
+    }
+}
+
+.additional-information__name-city{
+    @extend %additional;
+}
+
+.additional-information__apartment-area{
+    @include size_block(205px, 52px);
+    margin-right: 7%;
+    margin-left: 6%;
+
+    h3{
+        @extend %heading;
+    }
+}
+
+.additional-information__area{
+    @extend %additional;
+}
+
+.additional-information__repair-time{
+    @include size_block(150px, 55px);
+    margin-top: 34px;
+    margin-right: 32px;
+
+    h3{
+        @extend %heading;
+    }
+}
+
+.additional-information__time{
+    @extend %additional;
+}
+
+.additional-information__repair-cost{
+    @include size_block(209px, 55px);
+    margin-top: 34px;
+    margin-bottom: 79px;
+    
+    h3{
+        @extend %heading;
+    }
+}
+
+.additional-information__cost{
+    @extend %additional;
+}
+
+.slider{
+    display: flex;
+}
+
+.slider__dots{
+    margin: 0 30px;
+    padding-bottom: 1px;
+}

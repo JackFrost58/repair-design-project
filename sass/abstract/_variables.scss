@@ -1,14 +1,20 @@
-$main-back-color: #131313;
-$font-RNR: "ProximaNova-Regular";
+$font-PNR: "ProximaNova-Regular";
 $font-YOR: "YesevaOne-Regular", serif;
+$font-TNR: "Times New Roman", serif;
 $mobile: 375px;
 $desktop: 1440px;
 $text-color--main: #E3B873;
 $text-color--light: #ffffff;
+$main-back-color: #131313;
 $rotate-vertical: rotate(90deg);
 $uppercase: uppercase; 
 $limpid: transparent;
 
+
+@mixin size_block($width, $height) {
+    width: $width;
+    height: $height;
+}
 
 @mixin font($font, $size, $text-transform) {
     font-family: $font;
@@ -30,4 +36,23 @@ $limpid: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+%heading {
+    @include font($font-TNR, 1.1em, $uppercase);
+
+    margin: 0;
+    color: $text-color--main;
+}
+
+%additional{
+    @include size_block(94px, 42px);
+    @include font($font-PNR, 0.9em, none);
+    
+    display: inline-block;
+    margin-top: 9px;
+}
+
+%border-button{
+    border: 1px solid $text-color--main;
 }
