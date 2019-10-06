@@ -12,7 +12,7 @@
     }
 
     &:hover{
-        @include button_hover($limpid);
+        @include button_hover_back($limpid);
         border: 1px solid $text-color--light;
         p{
             color: $text-color--main;
@@ -26,52 +26,45 @@
 }
 
 .order-wrapper__button{
-    width: 207px;
-    height: 51px;
-    border: 0;
+    @include size_block(207px, 51px);
+   
+    border: 1px solid $text-color--light;
     border-radius: 2px;
-    background-color: $text-color--main;
+    background-color: $limpid;
 
     p{
-        margin: auto 0;
         @include font($font-PNR, 1em, $uppercase);
+
+        margin: auto 0;
         color: $text-color--light;
     }
 
-    @media (max-width: $mobile) {
-        width: 339px;
-        height: 51px;
-    }
-}
-
-.button-cost{
-    margin-left: 60px;
-    margin-bottom: 159px;
-
     &:hover{
-        @include button_hover($limpid);
+        @include button_hover_back($text-color--main);
         border: 1px solid $text-color--light;
     }
 
+    &:first-of-type{
+        margin-left: 60px;
+        margin-right: 1.5%;
+    }
+
     @media (max-width: $mobile) {
+        @include size_block(339px, 51px);
         margin-left: 4%;
         margin-bottom:  20px;
+
+        &:first-of-type{
+            margin-left: 4%;
+        }
     }
 }
 
-.button-submit{
-    margin-left: 1.5%;
-    border: 1px solid $text-color--light;
-    background-color: $limpid;
-
-    &:hover{
-        @include button_hover($text-color--main);
-    } 
-    
-    @media (max-width: $mobile) {
-        margin-left: 4%;
-    }
+.order-wrapper__button--active{
+    @include button_hover_back($text-color--main);
 }
+
+
 
 .slider__dot{
     @include size_block(10px, 10px);
@@ -117,5 +110,49 @@
 
     &:hover{
        @extend %border-button;
+    }
+}
+
+.completed-project-slider__button{
+    @include size_block(55px, 55px);
+
+    position: absolute;
+    z-index: 3;
+    padding: 0;
+    margin-top: 205px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    background-color: $text-color--main;
+
+    &:hover{
+        border: 2px solid #ff0000
+    }
+
+    @media (max-width: $mobile){
+        @include size_block(36px, 36px);
+
+        img{
+            @include size_block(6px, 10px);
+        }
+    }
+}
+
+.completed-project-slider__button_right{
+    right: 41px;
+
+    @media (max-width: $mobile){
+        right: 34px;
+        margin-top: 103px;
+    }
+}
+
+.completed-project-slider__button_left{
+    display: none;
+    margin-left: 46px;
+
+    @media (max-width: $mobile){
+        display: inline;
+        margin-top: 103px;
+        margin-left: 14px;
     }
 }

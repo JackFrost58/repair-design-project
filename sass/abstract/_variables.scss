@@ -5,6 +5,7 @@ $mobile: 375px;
 $desktop: 1440px;
 $text-color--main: #E3B873;
 $text-color--light: #ffffff;
+$text-color--dark-light: rgba(255, 255, 255, 0.3);
 $main-back-color: #131313;
 $rotate-vertical: rotate(90deg);
 $uppercase: uppercase; 
@@ -27,7 +28,7 @@ $limpid: transparent;
     flex-direction: column;
 }
 
-@mixin button_hover($back_color){
+@mixin button_hover_back($back_color){
     background-color: $back_color;
     cursor: pointer;
 }
@@ -36,6 +37,11 @@ $limpid: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin hover_color($color){
+    color: $color;
+    cursor: pointer;
 }
 
 %heading {

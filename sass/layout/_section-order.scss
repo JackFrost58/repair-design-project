@@ -4,8 +4,7 @@
     background-color: $main-back-color;
 
     @media (max-width: $mobile) {
-        width: 100%;
-        height: 476px;
+        @include size_block(100%, 476px);
     }
 }
 
@@ -38,12 +37,12 @@
 
     &:after{
         content: "";
+        @include size_block(2px, 51px);
+
         position: absolute;
         top: -16px;
         left: 119px;
         display: inline-block;
-        width: 2px;
-        height: 51px;
         background-color: $text-color--main;
         transform: $rotate_vertical;
        
@@ -51,13 +50,13 @@
 }
 
 .order-wrapper{
-    width: 95%;
-    height: 707px;
+    @include size_block(95%, 707px);
+
     background-image: url(./assets/img/background-section-order.png);
 
     @media (max-width: $mobile) {
-        width: 100%;
-        height: 391px;
+        @include size_block(100%, 391px);
+
         padding-top: 23%;
         background-image: url(./assets/img/background-section-order-mobile.png);
     }
@@ -65,10 +64,9 @@
 
 .order-wrapper__heading{
     @include font($font-YOR, 2.4em, $uppercase);
+    @include size_block(517px, 105px);
 
-    width: 517px;
-    height: 105px;
-    margin: 14.3% 0 3.4% 4.5%;
+    margin: 14.3% 0 1.4% 4.5%;
     font-weight: 600;
     line-height: 53px;
 
@@ -79,9 +77,8 @@
 
     @media (max-width: $mobile) {
         @include font($font-YOR, 1.5em, $uppercase);
+        @include size_block(339px, 60px);
 
-        width: 339px;
-        height: 60px;
         margin: 4% auto;
         font-weight: 400;
         line-height: 30px;
@@ -90,18 +87,16 @@
 
 .order-wrapper__description{
     @include font($font-PNR, 1.2em, none);
+    @include size_block(415px, 89px);
 
     display: inline-block;
-    width: 415px;
-    height: 89px;
-    margin: 0 61% 15px 91px;
+    margin: 0 61% 41px 60px;
     line-height: 30px;
 
     @media (max-width: $mobile) {
        @include font($font-PNR, 1em, none);
-
-       width: 297px;
-       height: 94px;
+       @include size_block(297px, 94px);
+      
        margin: 0 0 9% 5%;
        line-height: 24px;
     }
@@ -109,15 +104,15 @@
 
 .scroll-down{
     @include flex_center();
+    @include size_block(247px, 97px);
 
     position: absolute;
     bottom: 99px;
-    width: 247px;
-    height: 97px;
     background-color: $main-back-color;
 
     &:hover{
-        color: $text-color--main;
+        @include hover_color($text-color--main);
+        
         text-decoration: underline;
     }
 
@@ -132,9 +127,8 @@
 
 .scroll-down__ellipse{
     @include flex_center();
+    @include size_block(29px, 29px);
 
-    width: 29px;
-    height: 29px;
     margin-left: 4%;
     border: 1px solid $text-color--main;
     border-radius: 25px;

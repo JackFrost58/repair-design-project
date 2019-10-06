@@ -25,6 +25,7 @@
     margin: 2.4% 7% 2.6% 6%;
     @include font($font-PNR, 0.4em, $uppercase);
     color: $text-color--main;
+
     h1{
         margin: 0;
     }
@@ -48,8 +49,7 @@
     @include font($font-PNR, 0.8em, $uppercase);
 
     &:hover{
-        color: $text-color--main;
-        cursor: pointer;
+        @include hover_color($text-color--main);
     }
 
     &:last-of-type{
@@ -59,8 +59,9 @@
 
 .header__link{
     @include flex_center();
-    margin-right: 3%;
     @include font($font-PNR, 0.9em, $uppercase);
+
+    margin-right: 3%;
     color: $text-color--main;
 }
 
