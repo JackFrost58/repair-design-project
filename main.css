@@ -9,8 +9,8 @@
 .additional-information__name-city, .additional-information__area, .additional-information__time, .additional-information__cost {
   width: 94px;
   height: 42px;
-  font-family: "ProximaNova-Regular";
-  font-size: 0.9em;
+  font-family: "FuturaBookC-Regular", sans-serif;
+  font-size: 15px;
   text-transform: none;
   display: inline-block;
   margin-top: 9px;
@@ -18,6 +18,91 @@
 
 .slider__arrow-left:hover, .slider__arrow-right:hover {
   border: 1px solid #E3B873;
+}
+
+.input-name__enter, .input-phone__enter {
+  height: 26px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+}
+
+.input-name__enter::-webkit-input-placeholder, .input-phone__enter::-webkit-input-placeholder {
+  font-family: "FuturaBookC-Regular", sans-serif;
+  font-size: 18px;
+  text-transform: none;
+  color: #363636;
+  opacity: 1;
+}
+
+.input-name__enter:-ms-input-placeholder, .input-phone__enter:-ms-input-placeholder {
+  font-family: "FuturaBookC-Regular", sans-serif;
+  font-size: 18px;
+  text-transform: none;
+  color: #363636;
+  opacity: 1;
+}
+
+.input-name__enter::-ms-input-placeholder, .input-phone__enter::-ms-input-placeholder {
+  font-family: "FuturaBookC-Regular", sans-serif;
+  font-size: 18px;
+  text-transform: none;
+  color: #363636;
+  opacity: 1;
+}
+
+.input-name__enter::placeholder, .input-phone__enter::placeholder {
+  font-family: "FuturaBookC-Regular", sans-serif;
+  font-size: 18px;
+  text-transform: none;
+  color: #363636;
+  opacity: 1;
+}
+
+.input-name__enter::-ms-input-placeholder, .input-phone__enter::-ms-input-placeholder {
+  color: #363636;
+}
+
+@media (max-width: 375px) {
+  .input-name__enter, .input-phone__enter {
+    border-bottom: 1px solid #363636;
+  }
+  .input-name__enter:placeholder-shown, .input-phone__enter:placeholder-shown {
+    background-color: transparent;
+  }
+  .input-name__enter::-webkit-input-placeholder, .input-phone__enter::-webkit-input-placeholder {
+    color: #ffffff;
+    opacity: 1;
+  }
+  .input-name__enter:-ms-input-placeholder, .input-phone__enter:-ms-input-placeholder {
+    color: #ffffff;
+    opacity: 1;
+  }
+  .input-name__enter::-ms-input-placeholder, .input-phone__enter::-ms-input-placeholder {
+    color: #ffffff;
+    opacity: 1;
+  }
+  .input-name__enter::placeholder, .input-phone__enter::placeholder {
+    color: #ffffff;
+    opacity: 1;
+  }
+  .input-name__enter::-ms-input-placeholder, .input-phone__enter::-ms-input-placeholder {
+    color: #ffffff;
+  }
+}
+
+.input-name__heading, .input-phone__heading {
+  font-family: "FuturaBookC-Regular", sans-serif;
+  font-size: 15px;
+  text-transform: none;
+  color: rgba(54, 54, 54, 0.5);
+}
+
+@media (max-width: 375px) {
+  .input-name__heading, .input-phone__heading {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @font-face {
@@ -28,6 +113,11 @@
 @font-face {
   font-family: "YesevaOne-Regular";
   src: url(./assets/fonts/YesevaOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: "FuturaBookC-Regular";
+  src: url(./assets/fonts/FuturaBookC.otf);
 }
 
 .header__button {
@@ -198,6 +288,25 @@
   }
 }
 
+.submit-form__button {
+  width: 200px;
+  height: 51px;
+  border: 0 solid transparent;
+  color: #ffffff;
+  background-color: #E3B873;
+}
+
+@media (max-width: 375px) {
+  .submit-form__button {
+    width: 340px;
+    height: 51px;
+    position: relative;
+    top: 82px;
+    z-index: 2;
+    margin: auto;
+  }
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,7 +386,7 @@ body {
 
 .header-navbar-list__item {
   margin-right: 8%;
-  font-family: "ProximaNova-Regular";
+  font-family: "FuturaBookC-Regular", sans-serif;
   font-size: 0.8em;
   text-transform: uppercase;
 }
@@ -289,6 +398,11 @@ body {
 
 .header-navbar-list__item:last-of-type {
   margin-right: 0;
+}
+
+.header-navbar-list__item--active {
+  color: #E3B873;
+  cursor: pointer;
 }
 
 .header__link {
@@ -424,10 +538,10 @@ body {
 }
 
 .order-wrapper__description {
-  font-family: "ProximaNova-Regular";
+  font-family: "FuturaBookC-Regular", sans-serif;
   font-size: 1.2em;
   text-transform: none;
-  width: 415px;
+  width: 400px;
   height: 89px;
   display: inline-block;
   margin: 0 61% 41px 60px;
@@ -502,7 +616,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 667px;
+  height: 669px;
   background-color: #131313;
 }
 
@@ -568,10 +682,10 @@ body {
 }
 
 .description-project__info {
-  font-family: "ProximaNova-Regular";
-  font-size: 1em;
+  font-family: "FuturaBookC-Regular", sans-serif;
+  font-size: 18px;
   text-transform: none;
-  width: 100%;
+  width: 98%;
   height: 77px;
   display: inline-block;
   margin-bottom: 42px;
@@ -821,5 +935,267 @@ body {
   .completed-project-slider__images .completed-project-slider__image {
     display: none;
   }
+}
+
+.section-online-controls {
+  margin: 0;
+  background: #ffffff;
+}
+
+@media (max-width: 375px) {
+  .section-online-controls {
+    background: #131313;
+  }
+}
+
+.section-online-controls__wrapper {
+  height: 95px;
+  padding-top: 4%;
+  background-color: #131313;
+}
+
+@media (max-width: 375px) {
+  .section-online-controls__wrapper {
+    padding-top: 43px;
+  }
+}
+
+.section-online-controls__heading {
+  width: 196px;
+  height: 26px;
+  font-family: "YesevaOne-Regular", serif;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin: 13px auto;
+  font-weight: 400;
+}
+
+.section-online-control__icon {
+  width: 34px;
+  height: 29px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.section-online-control__icon:before {
+  content: "";
+  width: 2px;
+  height: 32px;
+  position: absolute;
+  right: 56px;
+  display: inline-block;
+  background-color: #E3B873;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.section-online-control__icon:after {
+  content: "";
+  width: 2px;
+  height: 32px;
+  position: absolute;
+  left: 56px;
+  display: inline-block;
+  background-color: #E3B873;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.section-online-control__camera {
+  margin: 0 auto;
+}
+
+.section-online-control__video {
+  height: 434px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(52%, #131313), color-stop(48%, #ffffff));
+  background: linear-gradient(#131313 52%, #ffffff 48%);
+}
+
+.section-online-control__video iframe {
+  width: 57%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 375px) {
+  .section-online-control__video iframe {
+    margin: 0 auto;
+    width: 340px;
+  }
+}
+
+@media (max-width: 375px) {
+  .section-online-control__video {
+    height: 207px;
+    background: #131313;
+  }
+}
+
+.section-online-controls__line {
+  width: 51px;
+  height: 1px;
+  margin: 4.5% auto 2.4% auto;
+  background-color: #E3B873;
+}
+
+@media (max-width: 375px) {
+  .section-online-controls__line {
+    margin: 28px auto 21px;
+  }
+}
+
+.section-online-control__text {
+  font-family: "FuturaBookC-Regular", sans-serif;
+  font-size: 20px;
+  text-transform: none;
+  display: block;
+  width: 47%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 34px;
+  color: #363636;
+}
+
+@media (max-width: 375px) {
+  .section-online-control__text {
+    width: 340px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+}
+
+.submit-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 53.5%;
+  margin: 91px auto 109px auto;
+}
+
+@media (max-width: 375px) {
+  .submit-form {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 28px auto 0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(92%, #131313), color-stop(8%, #ffffff));
+    background: linear-gradient(#131313 92%, #ffffff 8%);
+  }
+}
+
+.input-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 15.4%;
+}
+
+@media (max-width: 375px) {
+  .input-name {
+    width: 340px;
+    height: 100%;
+    margin: auto;
+    margin-bottom: 63px;
+  }
+}
+
+.input-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 6.5%;
+}
+
+@media (max-width: 375px) {
+  .input-phone {
+    width: 340px;
+    height: 100%;
+    margin: auto;
+    margin-bottom: 26px;
+  }
+}
+
+.input-phone__heading {
+  width: 231px;
+}
+
+.input-check {
+  margin: 2% auto;
+}
+
+@media (max-width: 375px) {
+  .input-check {
+    position: relative;
+    bottom: 52px;
+    z-index: 2;
+    margin: auto;
+    margin-bottom: 62px;
+  }
+}
+
+.input-check__text {
+  font-family: "FuturaBookC-Regular", sans-serif;
+  font-size: 16px;
+  text-transform: none;
+  display: inline-block;
+  position: relative;
+  padding-left: 6px;
+  line-height: 20px;
+  cursor: pointer;
+  color: #363636;
+}
+
+.input-check__text:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #E3B873;
+}
+
+.input-check__text:after {
+  content: "";
+  width: 8px;
+  height: 5px;
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  left: 4px;
+  top: 4px;
+  border-radius: 1px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 375px) {
+  .input-check__text {
+    color: #ffffff;
+  }
+}
+
+.input-check__checkbox {
+  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */

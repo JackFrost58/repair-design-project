@@ -86,8 +86,8 @@
 }
 
 .order-wrapper__description{
-    @include font($font-PNR, 1.2em, none);
-    @include size_block(415px, 89px);
+    @include font($font-FBC, 1.2em, none);
+    @include size_block(400px, 89px);
 
     display: inline-block;
     margin: 0 61% 41px 60px;

@@ -46,7 +46,7 @@
 
 .header-navbar-list__item{
     margin-right: 8%;
-    @include font($font-PNR, 0.8em, $uppercase);
+    @include font($font-FBC, 0.8em, $uppercase);
 
     &:hover{
         @include hover_color($text-color--main);
@@ -55,6 +55,10 @@
     &:last-of-type{
         margin-right: 0;
     }
+}
+
+.header-navbar-list__item--active{
+    @include hover_color($text-color--main);
 }
 
 .header__link{

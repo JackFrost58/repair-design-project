@@ -1,6 +1,6 @@
 .section-completed-project{
     display: flex;
-    height: 667px;
+    height: 669px;
     background-color: $main-back-color;
 
     @media (max-width: $mobile){
@@ -57,8 +57,8 @@
 }
 
 .description-project__info{
-    @include font($font-PNR, 1em, none);
-    @include size_block(100%, 77px);
+    @include font($font-FBC, 18px, none);
+    @include size_block(98%, 77px);
 
     display: inline-block;
     margin-bottom: 42px;
@@ -84,6 +84,7 @@
         position: relative;
         top: 255px;
         margin: 0 auto;
+        
     }
 }
 
@@ -257,6 +258,7 @@
 
     display: flex;
     margin-left: 67px;
+    
     overflow: hidden;
 
     .completed-project-slider__image{

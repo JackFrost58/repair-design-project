@@ -1,13 +1,18 @@
 $font-PNR: "ProximaNova-Regular";
 $font-YOR: "YesevaOne-Regular", serif;
 $font-TNR: "Times New Roman", serif;
+$font-FBC: "FuturaBookC-Regular", sans-serif;
 $mobile: 375px;
 $desktop: 1440px;
 $text-color--main: #E3B873;
 $text-color--light: #ffffff;
+$text-color--dark: #363636;
 $text-color--dark-light: rgba(255, 255, 255, 0.3);
+$text-color--gray:rgba(54, 54, 54, 0.5);
 $main-back-color: #131313;
 $rotate-vertical: rotate(90deg);
+$rotate-half: rotate(-45deg);
+$transition: all 0.2s ease;
 $uppercase: uppercase; 
 $limpid: transparent;
 
@@ -53,7 +58,7 @@ $limpid: transparent;
 
 %additional{
     @include size_block(94px, 42px);
-    @include font($font-PNR, 0.9em, none);
+    @include font($font-FBC, 15px, none);
     
     display: inline-block;
     margin-top: 9px;
@@ -61,4 +66,52 @@ $limpid: transparent;
 
 %border-button{
     border: 1px solid $text-color--main;
+}
+
+%input-placeholder{
+    height: 26px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);;
+    
+
+    &::placeholder { 
+        @include font($font-FBC, 18px, none);
+
+        color: $text-color--dark;
+        opacity: 1; 
+    }
+
+    &::-ms-input-placeholder {
+        color: $text-color--dark;
+    }
+
+    @media (max-width: $mobile){
+        border-bottom: 1px solid $text-color--dark;
+
+
+        &:placeholder-shown{
+            background-color: $limpid;
+        }
+        
+        &::placeholder { 
+            color: $text-color--light;
+            opacity: 1; 
+        }
+    
+        &::-ms-input-placeholder {
+            color: $text-color--light;
+        }
+    }
+}
+
+%input-heading{
+    @include font($font-FBC, 15px, none);
+
+    color: $text-color--gray;
+
+    @media (max-width: $mobile){
+        color: $text-color--dark-light;
+   }
 }

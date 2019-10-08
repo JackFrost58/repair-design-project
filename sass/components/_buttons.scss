@@ -156,3 +156,20 @@
         margin-left: 14px;
     }
 }
+
+.submit-form__button{
+    @include size_block(200px, 51px);
+
+    border: 0 solid transparent;
+    color: $text-color--light;
+    background-color: $text-color--main;
+
+    @media (max-width: $mobile){
+        @include size_block(340px, 51px);
+
+        position: relative;
+        top: 82px;
+        z-index: 2;
+        margin: auto;
+    }    
+}

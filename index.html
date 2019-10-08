@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,7 +13,7 @@
             </div>
             <nav class="header-navbar">
                 <ul class="header-navbar-list">
-                    <li class="header-navbar-list__item">Home</li>
+                    <li class="header-navbar-list__item header-navbar-list__item--active">Home</li>
                     <li class="header-navbar-list__item">Projects</li>
                     <li class="header-navbar-list__item">Measurement</li>
                     <li class="header-navbar-list__item">Team</li>
@@ -36,7 +36,7 @@
             </aside>
             <div class="order-wrapper">
                 <h2 class="order-wrapper__heading">Turnkey repair in the city of </h2>
-                <span class="order-wrapper__description">Get ready-made turnkey repairs on time with work time saving up to 45 days and 20% from cost of materials due to the organization of work</span>
+                <span class="order-wrapper__description">Get ready-made turnkey repairs on time<br> with work time saving up to 45 days and 20% from cost of materials due to the organization of work</span>
                 <button class="order-wrapper__button order-wrapper__button--active">
                     <p>Calculate the cost</p>
                 </button>
@@ -47,7 +47,7 @@
             <div class="scroll-down">
                 <a class="scroll-down__link">Scroll Down</a>
                 <div class="scroll-down__ellipse">
-                    <img src="./assets/img/arrow.png" alt="arrow">
+                    <img src="./assets/img/arrow-down.png" alt="arrow-down">
                 </div>
             </div>
         </section>
@@ -66,7 +66,7 @@
                     </div>
                     <div class="additional-information__repair-time">
                         <h3>Repair time:</h3>
-                        <span class="additional-information__time">3.5 month</span>
+                        <span class="additional-information__time">3.5 months</span>
                     </div>
                     <div class="additional-information__repair-cost">
                         <h3>Repair cost:</h3>
@@ -93,18 +93,50 @@
                 </nav>
                 <div class="completed-project-slider__images">
                     <button class="completed-project-slider__button completed-project-slider__button_left">
-                        <img src="./assets/img/slider-left.png">                    
+                        <img src="./assets/img/slider-left.png"  alt="slider-left">                    
                     </button>
-                    <img class="completed-project-slider__image"  src="./assets/img/image_slider_1.png">
-                    <img class="completed-project-slider__image" src="./assets/img/image_slider_2.png">
-                    <img class="completed-project-slider__image__mobile" src="./assets/img/image-slider-mobile.png">
+                    <img class="completed-project-slider__image"  src="./assets/img/image_slider_1.png" alt="project_image_1">
+                    <img class="completed-project-slider__image" src="./assets/img/image_slider_2.png" alt="project_image_2">
+                    <img class="completed-project-slider__image__mobile" src="./assets/img/image-slider-mobile.png" alt="project_image_mobile">
                     <button class="completed-project-slider__button completed-project-slider__button_right">
-                        <img src="./assets/img/slider-right.png">                    
+                        <img src="./assets/img/slider-right.png" alt="slider-right">                    
                     </button>
                 </div>
             </div>
         </section>
-        <section class="section-video">
+        <section class="section-online-controls">
+            <div class="section-online-controls__wrapper">
+                <h2 class="section-online-controls__heading">Online controls</h2>
+                <div class="section-online-control__icon">
+                    <img class="section-online-control__camera" src="./assets/img/icon-camera.png" alt="icon_camera">
+                </div>
+            </div>
+            <div class="section-online-control__video">
+                    <iframe src="https://www.youtube.com/embed/Y8Q9ptCXzL0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+            </div>
+            <div class="section-online-controls__line"></div>
+            <span class="section-online-control__text">
+                At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast from one of our facilities!<br> Leave a request below and you will receive a link to the broadcast.
+            </span>
+            <form class="submit-form">
+                <div class="input-name">
+                    <label class="input-name__heading">Name</label>
+                    <input class="input-name__enter" type="text" pattern="^[a-zA-Z]+$" required placeholder="What is your name:">
+                </div>
+                <div class="input-phone">
+                    <label class="input-phone__heading">Phone</label>             
+                    <input class="input-phone__enter" type="tel" required placeholder="What is your phone:">
+                </div>
+                <input class="submit-form__button" type="submit" value="SUBMIT">
+                <div class="input-check">
+                    <label class="input-check__text">
+                         <input class="input-check__checkbox" checked required type="checkbox">
+                         I agree to the processing of personal data 
+                    </label>
+                </div>
+            </form>
+        </section>
+        <section class="section-types-of-repair">
 
         </section>
     </main>
