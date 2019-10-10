@@ -21,7 +21,7 @@
 }
 
 .sidebar__link{
-    @include font($font-PNR, 1em, $uppercase);
+    @include font($font-FDC, 14px, 16px, $uppercase);
 
     position: relative;
     display: inline-block;
@@ -63,12 +63,11 @@
 }
 
 .order-wrapper__heading{
-    @include font($font-YOR, 2.4em, $uppercase);
+    @include font($font-YOR, 2.4em, 53px, $uppercase);
     @include size_block(517px, 105px);
 
     margin: 14.3% 0 1.4% 4.5%;
-    font-weight: 600;
-    line-height: 53px;
+    font-weight: normal;
 
     &:after{
         content: "Rostov-on-Don";
@@ -76,29 +75,26 @@
     }
 
     @media (max-width: $mobile) {
-        @include font($font-YOR, 1.5em, $uppercase);
+        @include font($font-YOR, 1.5em, 30px, $uppercase);
         @include size_block(339px, 60px);
 
         margin: 4% auto;
         font-weight: 400;
-        line-height: 30px;
     }
 }
 
 .order-wrapper__description{
-    @include font($font-FBC, 1.2em, none);
+    @include font($font-FBC, 1.2em, 30px, none);
     @include size_block(400px, 89px);
 
     display: inline-block;
     margin: 0 61% 41px 60px;
-    line-height: 30px;
 
     @media (max-width: $mobile) {
-       @include font($font-PNR, 1em, none);
+       @include font($font-PNR, 1em, 24px, none);
        @include size_block(297px, 94px);
       
        margin: 0 0 9% 5%;
-       line-height: 24px;
     }
 }
 
@@ -122,7 +118,7 @@
 }
 
 .scroll-down__link{
-    @include font($font-YOR, 1em, $uppercase);
+    @include font($font-YOR, 1em, 19px, $uppercase);
 }
 
 .scroll-down__ellipse{

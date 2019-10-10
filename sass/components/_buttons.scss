@@ -7,7 +7,7 @@
     background-color: $text-color--main;
     p{
         margin: auto 0;
-        @include font($font-PNR, 0.9em, $uppercase);
+        @include font($font-PNR, 0.9em, 15px, $uppercase);
         color: $text-color--light;
     }
 
@@ -33,7 +33,7 @@
     background-color: $limpid;
 
     p{
-        @include font($font-PNR, 1em, $uppercase);
+        @include font($font-PNR, 1em, 15px, $uppercase);
 
         margin: auto 0;
         color: $text-color--light;
@@ -157,7 +157,7 @@
     }
 }
 
-.submit-form__button{
+.submit-button{
     @include size_block(200px, 51px);
 
     border: 0 solid transparent;
@@ -173,3 +173,11 @@
         margin: auto;
     }    
 }
+
+.submit-button__left{
+    @include size_block(213px, 51px);
+
+    margin-left: 48.2%;
+    margin-bottom: 5%;
+}
+

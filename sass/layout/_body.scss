@@ -1,6 +1,7 @@
 body{
     @include flex_column();
     max-width: $desktop;
+    min-width: $mobile;
     margin: 0 auto;
     padding: 0;
     color: white;

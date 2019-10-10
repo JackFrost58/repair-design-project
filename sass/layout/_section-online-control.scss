@@ -18,40 +18,15 @@
 }
 
 .section-online-controls__heading{
-    @include size_block(196px, 26px);
-    @include font($font-YOR, 1.2em, $uppercase);
+    @include head_block($text-color--light);
 
-    margin: 13px auto;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 .section-online-control__icon{
     @include size_block(34px, 29px);
 
-    position: relative;
-    margin: 0 auto;
-
-    &:before{
-        content: "";
-        @include size_block(2px, 32px);
-
-        position: absolute;
-        right: 56px;
-        display: inline-block;
-        background-color: $text-color--main;
-        transform: $rotate_vertical;
-    }
-
-    &:after{
-        content: "";
-        @include size_block(2px, 32px);
-
-        position: absolute;
-        left: 56px;
-        display: inline-block;
-        background-color: $text-color--main;
-        transform: $rotate_vertical;
-    }
+    @extend %icon-property;
 }
 
 .section-online-control__camera{
@@ -95,13 +70,12 @@
 }
 
 .section-online-control__text{
-    @include font($font-FBC, 20px, none);
+    @include font($font-FBC, 20px, 34px, none);
 
     display: block;
     width: 47%;
     margin: 0 auto;
     text-align: center;
-    line-height: 34px;
     color: $text-color--dark;
 
     @media (max-width: $mobile){
@@ -185,45 +159,7 @@
 }
 
 .input-check__text{
-    @include font($font-FBC, 16px, none);
-
-    display: inline-block;
-    position: relative;
-    padding-left: 6px;
-    line-height: 20px;
-    cursor: pointer;
-    color: $text-color--dark;
-
-    &:before{
-        content: "";
-        @include size_block(18px, 18px);
-
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        background-color: $text-color--main; 
-    }
-
-    &:after{
-        content: "";
-        @include size_block(8px, 5px);
-
-        position: absolute;
-        -webkit-transition: $transition;
-        -moz-transition: $transition;
-        -o-transition: $transition;
-        transition: $transition;
-        left: 4px;
-        top: 4px;
-        border-radius: 1px;
-        border-left: 2px solid $text-color--light;
-        border-bottom: 2px solid $text-color--light;
-        -webkit-transform: $rotate-half;
-        -moz-transform: $rotate-half;
-        -o-transform: $rotate-half;
-        -ms-transform: $rotate-half;
-        transform: $rotate-half;
-    }   
+    @extend %checkbox;
 
     @media (max-width: $mobile){
        color: $text-color--light;

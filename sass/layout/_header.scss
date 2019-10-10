@@ -22,11 +22,11 @@
 
 
 .header__logo{
-    margin: 2.4% 7% 2.6% 6%;
-    @include font($font-PNR, 0.4em, $uppercase);
+    margin: 2.4% 7% 2.6% 5.6%;
     color: $text-color--main;
 
     h1{
+        @include font($font-FDC, 14px, 16px, $uppercase);
         margin: 0;
     }
 
@@ -46,7 +46,7 @@
 
 .header-navbar-list__item{
     margin-right: 8%;
-    @include font($font-FBC, 0.8em, $uppercase);
+    @include font($font-FBC, 0.8em, 16px, $uppercase);
 
     &:hover{
         @include hover_color($text-color--main);
@@ -63,7 +63,7 @@
 
 .header__link{
     @include flex_center();
-    @include font($font-PNR, 0.9em, $uppercase);
+    @include font($font-PNR, 0.9em, 16px, $uppercase);
 
     margin-right: 3%;
     color: $text-color--main;

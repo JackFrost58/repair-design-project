@@ -1,7 +1,9 @@
 $font-PNR: "ProximaNova-Regular";
 $font-YOR: "YesevaOne-Regular", serif;
+$font-FDC: "FuturaDemiC-Regular",sans-serif;
 $font-TNR: "Times New Roman", serif;
 $font-FBC: "FuturaBookC-Regular", sans-serif;
+$font-FMC: "FuturaMediumC-Regular",sans-serif;
 $mobile: 375px;
 $desktop: 1440px;
 $text-color--main: #E3B873;
@@ -22,9 +24,18 @@ $limpid: transparent;
     height: $height;
 }
 
-@mixin font($font, $size, $text-transform) {
+@mixin head_block($color){
+    @include font($font-YOR, 20px, 28px, $uppercase);
+
+    margin: 13px auto;
+    text-align: center;
+    color: $color;
+}
+
+@mixin font($font, $size, $line, $text-transform) {
     font-family: $font;
     font-size: $size;
+    line-height: $line;
     text-transform: $text-transform;
 }
 
@@ -49,8 +60,21 @@ $limpid: transparent;
     cursor: pointer;
 }
 
+@mixin image($url){
+    background-image: url($url);
+    background-repeat:  no-repeat;
+}
+
+@mixin pos_relative($top, $right, $bottom, $left) {
+    position: relative;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;    
+}
+
 %heading {
-    @include font($font-TNR, 1.1em, $uppercase);
+    @include font($font-TNR, 1.1em, 25px, $uppercase);
 
     margin: 0;
     color: $text-color--main;
@@ -58,7 +82,7 @@ $limpid: transparent;
 
 %additional{
     @include size_block(94px, 42px);
-    @include font($font-FBC, 15px, none);
+    @include font($font-FBC, 15px, 20px, none);
     
     display: inline-block;
     margin-top: 9px;
@@ -73,11 +97,11 @@ $limpid: transparent;
     border-top: 0;
     border-right: 0;
     border-left: 0;
-    border-bottom: 1px solid rgba(54, 54, 54, 0.3);;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
     
 
     &::placeholder { 
-        @include font($font-FBC, 18px, none);
+        @include font($font-FBC, 18px, 20px, none);
 
         color: $text-color--dark;
         opacity: 1; 
@@ -89,7 +113,7 @@ $limpid: transparent;
 
     @media (max-width: $mobile){
         border-bottom: 1px solid $text-color--dark;
-
+        background-color: transparent;
 
         &:placeholder-shown{
             background-color: $limpid;
@@ -107,11 +131,74 @@ $limpid: transparent;
 }
 
 %input-heading{
-    @include font($font-FBC, 15px, none);
+    @include font($font-FBC, 15px, 20px, none);
 
     color: $text-color--gray;
 
     @media (max-width: $mobile){
         color: $text-color--dark-light;
    }
+}
+
+%icon-property{
+    position: relative;
+    margin: 0 auto;
+
+    &:before{
+        content: "";
+        @include size_block(2px, 32px);
+
+        position: absolute;
+        right: 56px;
+        display: inline-block;
+        background-color: $text-color--main;
+        transform: $rotate_vertical;
+    }
+
+    &:after{
+        content: "";
+        @include size_block(2px, 32px);
+
+        position: absolute;
+        left: 56px;
+        display: inline-block;
+        background-color: $text-color--main;
+        transform: $rotate_vertical;
+    }
+}
+
+%checkbox{
+    @include font($font-FBC, 16px, 22px, none);
+
+    display: inline-block;
+    position: relative;
+    padding-left: 6px;
+    line-height: 20px;
+    cursor: pointer;
+    color: $text-color--dark;
+
+    &:before{
+        content: "";
+        @include size_block(18px, 18px);
+
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background-color: $text-color--main; 
+    }
+
+    &:after{
+        content: "";
+        @include size_block(8px, 5px);
+
+        position: absolute;
+        transition: $transition;
+        left: 4px;
+        top: 4px;
+        border-radius: 1px;
+        border-left: 2px solid $text-color--light;
+        border-bottom: 2px solid $text-color--light;
+        transform: $rotate-half;
+    }   
+
 }
