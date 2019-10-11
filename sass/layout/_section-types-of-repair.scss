@@ -14,16 +14,17 @@
 
 .price-wrapper{
     display: flex;
-    margin: 30px 5% 12%;
+    margin: 30px 7% 12%;
 
     @media (max-width: $mobile){
         @include flex_column();
+        margin: 30px 5% 12%;
     }
     
 }
 
 .price-wrapper__item{
-    width: 33%;
+    width: 32%;
     margin-right: 2.5%;    
 
     &:last-child{
@@ -44,27 +45,32 @@
     }
 }
 
-.price-wrapper__back-redecorating{
+.price-wrapper--back-redecorating{
     @include image("./assets/img/redecorating.png");
 }
 
-.price-wrapper__back-overhaul{
+.price-wrapper--back-overhaul{
     @include image("./assets/img/overhaul.png");
+
+    @media (max-width: $mobile){
+        @include image("./assets/img/overhaul-media.png");
+    }
 }
 
-.price-wrapper__back-designer-repair{
+.price-wrapper--back-designer-repair{
     @include image("./assets/img/designer-repair.png");
 }
 
 .price-wrapper__head-item{
     @include font($font-YOR, 18px, 25px, none);
 
-    margin-bottom: 13px;
-    margin-left: 34px;
+    margin: 0 0 13px 34px;
     color: $text-color--dark;
 
     @media (max-width: $mobile){
         @include font($font-YOR, 15px, 21px, none);
+
+        margin-top: 21px;
     }
 }
 
@@ -96,16 +102,15 @@
 
     @media (max-width: $mobile){
         @include font($font-FBC, 13px, 22px, none);
+        
     }
 }
 
-.price-wrapper__cost{
+.block-cost{
     @include size_block(228px, 54px);
     @include flex_center();
-
-    position: relative;
-    bottom: 28px;
-    left: 39px;
+    @include pos_relative(none, none, 28px, 29px);
+    
     background-color: $text-color--main;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
 
@@ -117,13 +122,13 @@
     }
 }
 
-.price-wrapper__numeral-cost{
+.block-cost__numeral{
     @include font($font-YOR, 18px, 25px, $uppercase);
-
-    text-align: center;
 
     @media (max-width: $mobile){
         @include font($font-YOR, 15px, 21px, $uppercase);
+
+        margin: 10px 0;
     }
 }
 
@@ -244,9 +249,12 @@
     position: relative;
     right: 131px;
     margin: 0px;
-    border: 2px solid $text-color--main;
+    border: 3px solid transparent;
     border-radius: 50%;
-    overflow: hidden;
+    background: 
+       linear-gradient(#fff,#fff) padding-box,
+       linear-gradient(to right, #fff 0%, #fff 20%, #fff 20%, $text-color--main 100%) border-box;
+
 }
 
 .block-fantasies{
@@ -356,5 +364,13 @@
         justify-content: center;
         height: 242px;
         background: linear-gradient($text-color--light 30%, $main-back-color 0%);
+    }
+}
+
+.price-wrapper-project-list--full-media{
+    @media (max-width: $mobile){
+        height: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
