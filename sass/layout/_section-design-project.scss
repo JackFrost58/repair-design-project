@@ -8,12 +8,6 @@
     }
 }
 
-.heading-wrapper__head--letter-white{
-    @media (max-width: $mobile){
-        margin-top: 0;
-        color: $text-color--light;
-    }
-}
 .section-design-project__description{
     @include font($font-FBC, 20px, 27px, none);
 

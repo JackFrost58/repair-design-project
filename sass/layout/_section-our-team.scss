@@ -135,7 +135,7 @@
     @include font($font-YOR, 13px, 20px, $uppercase);
 
     display: block;
-    margin: 13px 0;
+    margin-top: 13px;
     font-weight: normal;
     color: $text-color--light;
     text-align: center;
@@ -155,7 +155,7 @@
 
 .section-our-team__container{
     width: 39%;
-    margin: 0 auto 19px;
+    margin: 0 auto 109px;
 
     @media (max-width: $mobile){
         display: none;

@@ -1,4 +1,4 @@
-.header__button{
+.request__button{
     width: 161px;
     height: 37px;
     margin: auto 0;
@@ -167,17 +167,39 @@
     @media (max-width: $mobile){
         @include size_block(340px, 51px);
 
-        position: relative;
-        top: 82px;
-        z-index: 2;
         margin: auto;
     }    
 }
 
-.submit-button__left{
+.submit-button--left{
     @include size_block(213px, 51px);
 
     margin-left: 48.2%;
     margin-bottom: 5%;
 }
 
+
+.submit-button--down{
+    @media (max-width: $mobile) {
+        position: relative;
+        top: 82px;
+    }
+}
+
+.address__social{
+    @include size_block(28px, 28px);
+    @include flex_center();
+
+    margin-right: 15px;
+    border: 1px solid $limpid;
+    border-radius: 50%;
+    background: $text-color--main;
+
+    &:hover{
+        border: 1px solid #ff0000
+    }
+
+    @media (max-width: $mobile) {
+        @include size_block(39px, 39px);
+    }
+}

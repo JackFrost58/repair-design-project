@@ -1,6 +1,5 @@
 .header{
     display: flex;
-    height: 83px;
     background-color: $main-back-color;
 
     @media (max-width: $mobile) {
@@ -9,17 +8,6 @@
         height: 57px;
     }
 }
-
-.header-navbar{
-    width: 40.5%;
-    margin-top: 2.5%;
-    margin-right: 4.6%;
-
-    @media (max-width: $mobile) {
-        display: none;
-    }
-}
-
 
 .header__logo{
     margin: 2.4% 7% 2.6% 5.6%;
@@ -31,49 +19,7 @@
     }
 
     @media (max-width: $mobile) {
+        @include font($font-FDC, 12px, 14px, $uppercase);
        margin: 0 0 0 5%;
-    }
-}
-
-.header-navbar-list{
-    display: flex;
-    justify-content: space-between;
-    height: 10px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.header-navbar-list__item{
-    margin-right: 8%;
-    @include font($font-FBC, 0.8em, 16px, $uppercase);
-
-    &:hover{
-        @include hover_color($text-color--main);
-    }
-
-    &:last-of-type{
-        margin-right: 0;
-    }
-}
-
-.header-navbar-list__item--active{
-    @include hover_color($text-color--main);
-}
-
-.header__link{
-    @include flex_center();
-    @include font($font-PNR, 0.9em, 16px, $uppercase);
-
-    margin-right: 3%;
-    color: $text-color--main;
-}
-
-.header__telephone{
-    color: $text-color--main;
-
-    @media (max-width: $mobile) {
-        color: $text-color--light;
-        text-decoration: none;
     }
 }

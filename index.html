@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,27 +7,26 @@
     <link rel='stylesheet' href='./main.css'>
 <body>
     <header class="header">
-            <div class="header__logo">
-                <h1>IC "Repair design project"</h1>
-            </div>
-            <nav class="header-navbar">
-                <ul class="header-navbar-list">
-                    <li class="header-navbar-list__item header-navbar-list__item--active">Home</li>
-                    <li class="header-navbar-list__item">Projects</li>
-                    <li class="header-navbar-list__item">Measurement</li>
-                    <li class="header-navbar-list__item">Team</li>
-                    <li class="header-navbar-list__item">Reviews</li>
-                    <li class="header-navbar-list__item">Contacts</li>
-                </ul>
-            </nav>
-            <div class="header__link">
-                <a  class="header__telephone" href="tel:+7 (928) 768-32-39">+7 (928) 768-32-39</a>
-            </div>
-            <button class="header__button">
-                <p>Request a call</p>
-            </button>
+        <div class="header__logo">
+            <h1>IC "Repair design project"</h1>
+        </div>
+        <nav class="hf-navbar">
+            <ul class="hf-navbar-list">
+                <li class="hf-navbar-list__item hf-navbar-list__item--active">Home</li>
+                <li class="hf-navbar-list__item">Projects</li>
+                <li class="hf-navbar-list__item">Measurement</li>
+                <li class="hf-navbar-list__item">Team</li>
+                <li class="hf-navbar-list__item">Reviews</li>
+                <li class="hf-navbar-list__item">Contacts</li>
+            </ul>
+        </nav>
+        <div class="hf__link">
+            <a  class="hf__telephone" href="tel:+7 (928) 768-32-39">+7 (928) 768-32-39</a>
+        </div>
+        <button class="request__button">
+            <p>Request a call</p>
+        </button>
     </header>
-    
     <main class="main"> 
         <section class="section-order">
             <aside class="sidebar">
@@ -127,7 +125,7 @@
                     <label class="input-phone__heading">Phone</label>             
                     <input class="input-phone__enter" type="tel" required placeholder="What is your phone:">
                 </div>
-                <input class="submit-button" type="submit" value="SUBMIT">
+                <input class="submit-button submit-button--down" type="submit" value="SUBMIT">
                 <div class="input-check">
                     <label class="input-check__text">
                          <input class="input-check__checkbox" checked required type="checkbox">
@@ -137,9 +135,9 @@
             </form>
         </section>
         <section class="section-types-of-repair">
-            <div class="heading-wrapper">
-                <h2 class="heading-wrapper__head">Types of repair</h2>
-                <div class="heading-wrapper__icon">
+            <div class="white-heading">
+                <h2 class="white-heading__text">Types of repair</h2>
+                <div class="white-heading__icon">
                     <img src="./assets/img/types-of-repair-icon.png" alt="icon_repair">
                 </div>
             </div>
@@ -198,30 +196,63 @@
             </div>
             <div class="repair-additional-info">
                 <div class="repair-additional-info__circle">
-                    <div class="circle"></div>
+                    <div class="circle">
+                        <div class="circle__wrapper circle__wrapper--first">
+                            <div class="circle__limpid">
+                                <span class="circle__number">01</span>
+                            </div>
+                            <span class="circle__text">
+                                Our specialist will arrive for measurements per day contact, or appoint a date convenient for you
+                            </span>
+                        </div>
+                        <div class="circle__wrapper circle__wrapper--second">
+                            <div class="circle__limpid">
+                                <span class="circle__number">02</span>
+                            </div>
+                            <span class="circle__text">
+                                Free metering
+                            </span>
+                        </div>
+                        <div class="circle__wrapper circle__wrapper--third">
+                            <div class="circle__limpid">
+                                <span class="circle__number">03</span>
+                            </div>
+                            <span class="circle__text">
+                                Free consultation
+                            </span>
+                        </div>
+                        <div class="circle__wrapper circle__wrapper--four">
+                            <div class="circle__limpid">
+                                <span class="circle__number">04</span>
+                            </div>
+                            <span class="circle__text">
+                                Get a cost estimate and <br> the timing of your future repairs
+                            </span>
+                        </div>
+                    </div>
                 </div>
                 <div class="repair-additional-info__container">
-                    <form class="form-call">
-                        <h3 class="form-call__head">Leave a request for free<br> departure of the measurer</h3>
-                        <div class="form-call-container">
-                            <label class="form-call-container__heading">Name</label>
-                            <input class="form-call-container__input" type="text" pattern="^[a-zA-Z]+$" required placeholder="What is your name:">
+                    <form class="black-form">
+                        <h3 class="black-form__head">Leave a request for free<br> departure of the measurer</h3>
+                        <div class="black-form-container">
+                            <label class="black-form-container__heading">Name</label>
+                            <input class="black-form-container__input" type="text" pattern="^[a-zA-Z]+$" required placeholder="What is your name:">
                         </div>
-                        <div class="form-call-container">
-                            <label class="form-call-container__heading">Phone</label>             
-                            <input class="form-call-container__input" type="tel" required placeholder="What is your phone:">
+                        <div class="black-form-container">
+                            <label class="black-form-container__heading">Phone</label>             
+                            <input class="black-form-container__input" type="tel" required placeholder="What is your phone:">
                         </div>
-                        <div class="form-call-container">
-                                <label class="form-call-container__heading">Email</label>             
-                                <input class="form-call-container__input" type="email" required placeholder="What is your email:">
+                        <div class="black-form-container">
+                                <label class="black-form-container__heading">Email</label>             
+                                <input class="black-form-container__input" type="email" required placeholder="What is your email:">
                         </div>
-                        <div class="form-call-check">
-                            <label class="form-call-check__text">
-                                <input class="form-call-check__checkbox" checked required type="checkbox">
+                        <div class="black-form-check">
+                            <label class="black-form-check__text">
+                                <input class="black-form-check__checkbox" checked required type="checkbox">
                                 I agree to the processing of personal data 
                             </label>
                         </div>
-                        <input class="submit-button submit-button__left" type="submit" value="CALL THE MEASURE">  
+                        <input class="submit-button submit-button--left" type="submit" value="CALL THE MEASURE">  
                     </form>
                     <div class="help-save-cost">
                         <img src="./assets/img/piggy-bank.png" alt="piggy_bank">
@@ -270,9 +301,9 @@
             </div>
         </section>
         <section class="section-design-project">
-            <div class="heading-wrapper">
-                <h2 class="heading-wrapper__head heading-wrapper__head--letter-white">Design project</h2>
-                <div class="heading-wrapper__icon">
+            <div class="white-heading">
+                <h2 class="white-heading__text white-heading__text--letter-white">Design project</h2>
+                <div class="white-heading__icon">
                     <img src="./assets/img/design-project-icon.png" alt="icon_design">
                 </div>
             </div>
@@ -468,6 +499,162 @@
                 </div>
             </div>
         </section>
+        <section class="section-our-client">
+            <div class="white-heading">
+                <h2 class="white-heading__text">Our client</h2>
+                <div class="white-heading__icon">
+                    <img src="./assets/img/icon-client.png" width="28" height="29" alt="icon_client">
+                </div>
+            </div>
+            <span class="section-our-client__description">
+                80% of our customers recommend us to their friends and family.
+            </span>
+            <div class="section-our-client__wrapper">
+                <div class="block-comment">
+                    <div class="block-comment__content">
+                       <div class="block-comment__photo-name">
+                            <img src="./assets/img/photo-fedosova.png" alt="photo-fedosova">
+                            <h4 class="block-comment__name">Fedosova Maria Konstantinovna</h4>
+                        </div>
+                        <span class="block-comment__text">
+                            I want to thank the guys for their work. We put your shower part in repair. I am very grateful that i referred to the repair as to my own. 
+                            Great thanks i express the project to georgia for its professionalism and approach. The repair process was turned out in terms, faster than anticipated.
+                            Team mobile and professional. Works performed qualitatively without comments. Quality satisfied. Prices democratic. I recommend these masters.
+                        </span>
+                    </div>
+                    <div class="block-comment__numbers">
+                        <ul class="block-comment-list">
+                            <li class="block-comment-list__item block-comment-list__item-area">
+                                <img src="./assets/img/area.png" alt="area-icon">
+                                <span class="block-comment-list__text">40 m2</span>
+                            </li>
+                            <li class="block-comment-list__item block-comment-list__item-days">
+                                <img src="./assets/img/days.png" alt="days-icon">
+                                <span class="block-comment-list__text">48 days</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block-comment">
+                    <div class="block-comment__content">
+                        <div class="block-comment__photo-name">
+                            <img src="./assets/img/photo-afanasyev.png" alt="photo-afanasyev">
+                            <h4 class="block-comment__name">Afanasyev Sergey Alexandrovich</h4>
+                        </div>
+                        <span class="block-comment__text">
+                            I want to thank the guys for their work. We put your shower part in repair. I am very grateful that i referred to the repair as to my own. 
+                            Great thanks i express the project to georgia for its professionalism and approach. The repair process was turned out in terms, faster than anticipated.
+                            Team mobile and professional. Works performed qualitatively without comments. Quality satisfied. Prices democratic. I recommend these masters.
+                        </span>
+                    </div>    
+                    <div class="block-comment__numbers">
+                        <ul class="block-comment-list">
+                            <li class="block-comment-list__item block-comment-list__item-area">
+                                <img src="./assets/img/area.png" alt="area-icon">
+                                <span class="block-comment-list__text">90 m2</span>
+                            </li>
+                            <li class="block-comment-list__item block-comment-list__item-days">
+                                <img src="./assets/img/days.png" alt="days-icon">
+                                <span class="block-comment-list__text">128 days</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block-comment">
+                    <div class="block-comment__content">
+                        <div class="block-comment__photo-name">
+                            <img src="./assets/img/photo-kiriev.png" alt="photo-kiriev">
+                            <h4 class="block-comment__name">Kiriev Egor <br> Leonidovich</h4>
+                        </div>
+                        <span class="block-comment__text">
+                            I want to thank the guys for their work. We put your shower part in repair. I am very grateful that i referred to the repair as to my own. 
+                            Great thanks i express the project to georgia for its professionalism and approach. The repair process was turned out in terms, faster than anticipated.
+                            Team mobile and professional. Works performed qualitatively without comments. Quality satisfied. Prices democratic. I recommend these masters.
+                        </span>
+                    </div>
+                    <div class="block-comment__numbers">
+                        <ul class="block-comment-list">
+                            <li class="block-comment-list__item block-comment-list__item-area">
+                                <img src="./assets/img/area.png" alt="area-icon">
+                                <span class="block-comment-list__text">56 m2</span>
+                            </li>
+                            <li class="block-comment-list__item block-comment-list__item-days">
+                                <img src="./assets/img/days.png" alt="days-icon">
+                                <span class="block-comment-list__text">86 days</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-contacts">
+            <div class="section-contacts__back">
+                <form class="form-question">
+                    <h3 class="form-question__head">have any questions?</h3>
+                    <div class="form-question__wrapper">
+                        <div class="form-question-container">
+                            <label class="black-form-container__heading">Name</label>
+                            <input class="black-form-container__input" type="text" pattern="^[a-zA-Z]+$" required placeholder="What is your name:">
+                        </div>
+                        <div class="form-question-container">
+                            <label class="black-form-container__heading">Phone</label>             
+                            <input class="black-form-container__input" type="tel" required placeholder="What is your phone:">
+                        </div>
+                    </div>
+                    <div class="form-question__input-question">
+                        <label class="black-form-container__heading">Question</label>             
+                        <input class="black-form-container__input" type="text" required placeholder="I want to know:">
+                    </div>
+                    <div class="black-form-check black-form-check--center">
+                        <label class="black-form-check__text">
+                            <input class="black-form-check__checkbox" checked required type="checkbox">
+                            I agree to the processing of personal data 
+                        </label>
+                    </div>
+                    <input class="submit-button submit-button--center" type="submit" value="SUBMIT">  
+                </form>
+                <div class="section-contacts__info">
+                    <div class="address">
+                        <span class="address__text">
+                            Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel 
+                            <a href="tel:+7 (928) 768-32-39">+7 (928) 768 32 29</a>
+                        </span>
+                        <div class="address__buttons">
+                            <button class="address__social">
+                                <img src="./assets/img/mail.png" alt="mail">
+                            </button>
+                            <button class="address__social">
+                                <img src="./assets/img/inst.png" alt="instagram">
+                            </button>
+                        </div>
+                    </div>
+                    <img class="maps" src="./assets/img/maps.png" alt="maps">
+                    <img class="maps-media" src="./assets/img/maps-media.png" alt="maps-media">
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="footer__logo">
+            <h2>IC "Repair design project"</h2>
+        </div>
+        <nav class="hf-navbar">
+            <ul class="hf-navbar-list">
+                <li class="hf-navbar-list__item hf-navbar-list__item--active">Home</li>
+                <li class="hf-navbar-list__item">Projects</li>
+                <li class="hf-navbar-list__item">Measurement</li>
+                <li class="hf-navbar-list__item">Team</li>
+                <li class="hf-navbar-list__item">Reviews</li>
+                <li class="hf-navbar-list__item">Contacts</li>
+            </ul>
+        </nav>
+        <div class="hf__link">
+            <a  class="hf__telephone" href="tel:+7 (928) 768-32-39">+7 (928) 768-32-39</a>
+        </div>
+        <button class="request__button">
+            <p>Request a call</p>
+        </button>
+        </div>
+    </footer>
 </body>
 </html>
