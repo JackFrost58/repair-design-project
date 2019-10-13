@@ -2,6 +2,10 @@
     width: 40.5%;
     margin: auto 4.6% auto 0;
 
+    @media (min-width: $mobile) and (max-width: $tablet){
+       display: none;
+    }
+
     @media (max-width: $mobile) {
         display: none;
     }
@@ -13,6 +17,10 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+          display: none;
+    }
 }
 
 .hf-navbar-list__item{

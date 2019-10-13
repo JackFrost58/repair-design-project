@@ -12,6 +12,10 @@
     color: $text-color--light;
     background-color: $main-back-color;
 
+    @media (min-width: $mobile) and (max-width: $tablet){
+        width: 90%;      
+    }
+
     @media (max-width: $mobile){
         @include font($font-FBC, 15px, 20px, none);
         
@@ -22,6 +26,10 @@
 
 .section-our-team__wrapper{
     background: linear-gradient($main-back-color 35%, $text-color--light 0%);
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        background: $main-back-color;
+    }
 
     @media (max-width: $mobile){
         background: $main-back-color;
@@ -34,12 +42,24 @@
     width: 74%;
     margin: 0 auto;
 
+    @media (min-width: $mobile) and (max-width: $tablet){
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 5%;
+    }
+
     @media (max-width: $mobile){
         @include flex_column();
 
         align-items: center;
         width: 100%;
         margin: 0;
+    }
+}
+
+.block-team__member{
+    @media (min-width: $mobile) and (max-width: $tablet){
+        margin-bottom: 8%;
     }
 }
 
@@ -157,6 +177,11 @@
     width: 39%;
     margin: 0 auto 109px;
 
+    @media (min-width: $mobile) and (max-width: $tablet){
+        width: 90%;
+        margin: 0 auto;
+    }
+
     @media (max-width: $mobile){
         display: none;
     }
@@ -168,4 +193,8 @@
     display: block;
     text-align: center;
     color: $text-color--dark;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        color: $text-color--light;
+    }
 }

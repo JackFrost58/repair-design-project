@@ -1,7 +1,12 @@
 .section-our-client{
     margin-bottom: 132px;
+
     @media (max-width: $mobile){
         display: none;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        display: none;    
     }
 }
 

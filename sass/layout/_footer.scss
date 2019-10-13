@@ -1,6 +1,11 @@
 .footer{
     display: flex;
+    
     background-color: $main-back-color;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        display: none;    
+    }
 
     @media (max-width: $mobile) {
        display: none;

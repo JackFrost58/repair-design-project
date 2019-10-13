@@ -2,6 +2,10 @@
     display: flex;
     background-color: $main-back-color;
 
+    @media (min-width: $mobile) and (max-width: $tablet){
+        justify-content: space-between;  
+    }
+
     @media (max-width: $mobile) {
         justify-content: space-between;
         align-items: center;
@@ -16,6 +20,11 @@
     h1{
         @include font($font-FDC, 14px, 16px, $uppercase);
         margin: 0;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+       margin-right: 0;
+       margin-left: 82px;   
     }
 
     @media (max-width: $mobile) {

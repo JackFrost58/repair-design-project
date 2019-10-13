@@ -2,11 +2,16 @@
     display: flex;
     margin: 30px 7% 12%;
 
+    @media (min-width: $mobile) and (max-width: $tablet){
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 6%;
+    }
+
     @media (max-width: $mobile){
         @include flex_column();
         margin: 30px 5% 12%;
     }
-    
 }
 
 .price-wrapper__item{
@@ -14,6 +19,11 @@
     margin-right: 2.5%;    
 
     &:last-child{
+        margin-right: 0;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        width: 45%;
         margin-right: 0;
     }
 
@@ -67,6 +77,10 @@
     padding-top: 25px;
     background: $text-color--light;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        width: 250px;   
+    }
 
     @media (max-width: $mobile){
         @include size_block(270px, 241px);
@@ -128,6 +142,11 @@
 
 .repair-additional-info__container{
     width: 35.3%;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        width: 80%;  
+        margin: 0 auto;
+    }
 }
 
 .help-save-cost{
@@ -153,6 +172,10 @@
 
     @include image("./assets/img/background-circle.png");
     overflow: hidden;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        display: none;   
+    }
 }
 
 .circle{
@@ -213,6 +236,10 @@
 
 .block-fantasies{
    margin-top: 24px;
+
+   @media (min-width: $mobile) and (max-width: $tablet){
+        display: none;    
+   }
 }
 
 .block-fantasies__back{

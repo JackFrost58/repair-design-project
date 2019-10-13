@@ -1,6 +1,6 @@
 .section-order{
+    position: relative;
     display: flex;
-    height: 755px;
     background-color: $main-back-color;
 
     @media (max-width: $mobile) {
@@ -9,11 +9,16 @@
 }
 
 .sidebar{
-    width: 82px;
-    height: 463px;
-    padding-top: 17%;
+    width: 6%;
+    padding-top: 255px;
     color: $text-color--main;
     background-color: $main-back-color;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        width: 10%;
+        margin-top: 25%;
+        padding: 0;
+    }
 
     @media (max-width: $mobile) {
         display: none;
@@ -50,28 +55,35 @@
 }
 
 .order-wrapper{
-    @include size_block(95%, 707px);
+    @include image("./assets/img/background-section-order.png");
 
-    background-image: url(./assets/img/background-section-order.png);
+    width: 95%;
 
     @media (max-width: $mobile) {
-        @include size_block(100%, 391px);
+        @include image("./assets/img/back-order-media.png");
 
+        width: 100%;
         padding-top: 23%;
-        background-image: url(./assets/img/background-section-order-mobile.png);
     }
 }
 
 .order-wrapper__heading{
     @include font($font-YOR, 2.4em, 53px, $uppercase);
-    @include size_block(517px, 105px);
 
+    width: 495px;
     margin: 14.3% 0 1.4% 4.5%;
     font-weight: normal;
 
     &:after{
         content: "Rostov-on-Don";
         color: $text-color--main;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        @include font($font-YOR, 2em, 43px, $uppercase);
+
+        margin: 14.3% auto 4.5%;
+        text-align: center;
     }
 
     @media (max-width: $mobile) {
@@ -85,16 +97,22 @@
 
 .order-wrapper__description{
     @include font($font-FBC, 1.2em, 30px, none);
-    @include size_block(400px, 89px);
 
+    width: 395px;
     display: inline-block;
-    margin: 0 61% 41px 60px;
+    margin: 0 61% 41px 4.8%;
 
     @media (max-width: $mobile) {
        @include font($font-PNR, 1em, 24px, none);
-       @include size_block(297px, 94px);
       
+       width: 297px;
        margin: 0 0 9% 5%;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        display: block;
+        margin: 0 auto 5%;
+        text-align: center;
     }
 }
 
@@ -103,13 +121,17 @@
     @include size_block(247px, 97px);
 
     position: absolute;
-    bottom: 99px;
+    bottom: 0;
     background-color: $main-back-color;
 
     &:hover{
         @include hover_color($text-color--main);
         
         text-decoration: underline;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        display: none;  
     }
 
     @media (max-width: $mobile) {

@@ -26,4 +26,8 @@
 
 .black-heading--bottom{
     padding-top: 93px;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        padding-top: 20px;
+    }
 }
