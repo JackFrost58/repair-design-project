@@ -66,8 +66,8 @@
 .block-team__icon-back{
     @include size_block(70px, 70px);
     @include flex_center();
+    @extend %pos_relative;
 
-    position: relative;
     z-index: 1;
     background-color: $text-color--main;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);

@@ -68,7 +68,9 @@
 
 .block-comment__numbers{
     @include size_block(294px, 54px);
-    @include pos_relative(none, none, 27px, none);
+    @extend %pos_relative;
+
+    bottom: 27px;
 
     background-color: $text-color--main;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);

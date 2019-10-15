@@ -1,3 +1,7 @@
+.block-cost, .circle__wrapper--first, .circle__wrapper--second, .circle__wrapper--third, .circle__wrapper--fourth, .block-fantasies__images, .block-fantasies__images--position, .block-team__icon-back, .block-comment__numbers {
+  position: relative;
+}
+
 .additional-information__city h3, .additional-information__apartment-area h3, .additional-information__repair-time h3, .additional-information__repair-cost h3 {
   font-family: "Times New Roman", serif;
   font-size: 1.1em;
@@ -1484,9 +1488,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  top: none;
-  right: none;
   bottom: 28px;
   left: 29px;
   background-color: #E3B873;
@@ -1641,34 +1642,22 @@ body {
 }
 
 .circle__wrapper--first {
-  position: relative;
   top: 65px;
-  right: none;
-  bottom: none;
   left: 450px;
 }
 
 .circle__wrapper--second {
-  position: relative;
   top: 140px;
-  right: none;
-  bottom: none;
   left: 530px;
 }
 
 .circle__wrapper--third {
-  position: relative;
   top: 250px;
-  right: none;
-  bottom: none;
   left: 541px;
 }
 
-.circle__wrapper--four {
-  position: relative;
+.circle__wrapper--fourth {
   top: 330px;
-  right: none;
-  bottom: none;
   left: 480px;
 }
 
@@ -1779,11 +1768,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
-  top: none;
-  right: 0;
-  bottom: 40px;
   left: 0;
+  bottom: 40px;
+  right: 0;
   margin-right: 43px;
 }
 
@@ -1802,11 +1789,9 @@ body {
 }
 
 .block-fantasies__images--position {
-  position: relative;
-  top: none;
-  right: 0;
-  bottom: 111px;
   left: 0;
+  bottom: 111px;
+  right: 0;
 }
 
 .mobile-slider-back {
@@ -2416,7 +2401,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
   z-index: 1;
   background-color: #E3B873;
   -webkit-box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
@@ -2737,7 +2721,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
   z-index: 1;
   background-color: #E3B873;
   -webkit-box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
@@ -3025,11 +3008,7 @@ body {
 .block-comment__numbers {
   width: 294px;
   height: 54px;
-  position: relative;
-  top: none;
-  right: none;
   bottom: 27px;
-  left: none;
   background-color: #E3B873;
   -webkit-box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
           box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
@@ -3233,11 +3212,6 @@ body {
 
 @media (max-width: 376px) {
   .submit-button--center {
-    position: relative;
-    top: none;
-    right: none;
-    bottom: none;
-    left: none;
     margin: 0;
     -webkit-transform: none;
             transform: none;

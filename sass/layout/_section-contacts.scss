@@ -108,7 +108,7 @@
     transform: translateX(-50%);
 
     @media (max-width: $mobile){
-        @include pos_relative(none, none, none, none);
+        
         margin: 0;
         transform:none;
     }

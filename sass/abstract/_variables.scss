@@ -67,12 +67,8 @@ $limpid: transparent;
     background-repeat:  no-repeat;
 }
 
-@mixin pos_relative($top, $right, $bottom, $left) {
-    position: relative;
-    top: $top;
-    right: $right;
-    bottom: $bottom;
-    left: $left;    
+%pos_relative {
+    position: relative;  
 }
 
 %heading {

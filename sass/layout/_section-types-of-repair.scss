@@ -109,8 +109,10 @@
 .block-cost{
     @include size_block(228px, 54px);
     @include flex_center();
-    @include pos_relative(none, none, 28px, 29px);
+    @extend %pos_relative;
     
+    bottom: 28px;
+    left: 29px;
     background-color: $text-color--main;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
 
@@ -166,7 +168,6 @@
     color: $text-color--main;
 }
 
-
 .repair-additional-info__circle{
     @include size_block(57.7%, 83%);
 
@@ -219,19 +220,31 @@
 }
 
 .circle__wrapper--first{
-    @include pos_relative(65px, none, none, 450px);
+    @extend %pos_relative;
+
+    top: 65px;
+    left: 450px;
 }
 
 .circle__wrapper--second{
-    @include pos_relative(140px, none, none, 530px);
+    @extend %pos_relative;
+
+    top: 140px;
+    left:  530px;
 }
 
 .circle__wrapper--third{
-    @include pos_relative(250px, none, none, 541px);
+    @extend %pos_relative;
+
+    top: 250px;
+    left: 541px;
 }
 
-.circle__wrapper--four{
-    @include pos_relative(330px, none, none, 480px);
+.circle__wrapper--fourth{
+    @extend %pos_relative;
+
+    top: 330px;
+    left: 480px;
 }
 
 .block-fantasies{
@@ -315,8 +328,11 @@
 
 .block-fantasies__images{
     @include flex_column();
-    @include pos_relative(none, 0, 40px, 0);
+    @extend %pos_relative;
 
+    left: 0;
+    bottom: 40px;
+    right: 0;
     margin-right: 43px;
 
     @media (max-width: $mobile){
@@ -333,7 +349,11 @@
 }
 
 .block-fantasies__images--position{
-    @include pos_relative(none, 0, 111px, 0);
+    @extend %pos_relative;
+
+    left: 0;
+    bottom: 111px;
+    right: 0;
 }
 
 .mobile-slider-back{
