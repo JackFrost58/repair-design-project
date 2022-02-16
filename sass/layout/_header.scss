@@ -33,7 +33,7 @@
     }
 
     @media (max-width: $mobile) {
-        @include font($font-FDC, 12px, 14px, $uppercase);
+       @include font($font-FDC, 12px, 14px, $uppercase);
        margin: 0 0 0 5%;
     }
 }

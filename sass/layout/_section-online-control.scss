@@ -31,7 +31,6 @@
             width: 340px;
             
         }
-       
     }
 
     @media (max-width: $mobile){
@@ -75,6 +74,7 @@
 
 .submit-form{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 770px;
     margin: 91px auto 109px auto; 
@@ -102,8 +102,6 @@
 .input-name{
     @include flex_column();
 
-    margin-right: 15.4%;
-
     @media (min-width: $mobile) and (max-width: $tablet){
         width: 50%;
         margin: 5px;
@@ -121,8 +119,6 @@
 .input-phone{
     @include flex_column();
 
-    margin-right: 6.5%;
-
     @media (min-width: $mobile) and (max-width: $tablet){
         width: 50%;
         margin: 5px;
@@ -138,7 +134,7 @@
 }
 
 .input-name__heading{
-   @extend %input-heading;
+   @extend %input-heading;  
 }
 
 .input-name__enter{

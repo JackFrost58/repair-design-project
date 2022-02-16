@@ -110,9 +110,11 @@
     border: 1px solid $limpid;
     background-color: $limpid;
     background-image: url(./assets/img/arrow-left.png);
+    cursor: pointer;
+    transition: 1s;
 
     &:hover{
-       @extend %border-button;
+       transform: scale(1.2)
     }
 }
 
@@ -123,9 +125,11 @@
     margin-top: 2px;
     border: 1px solid $limpid;
     background-color: $limpid;
+    cursor: pointer;
+    transition: 1s;
 
     &:hover{
-       @extend %border-button;
+       transform: scale(1.2)
     }
 }
 
@@ -140,7 +144,7 @@
     background-color: $text-color--main;
 
     &:hover{
-        border: 2px solid #ff0000
+        border: 2px solid $text-color--light;
     }
 
     @media (max-width: $mobile){
@@ -178,6 +182,13 @@
     border: 0 solid transparent;
     color: $text-color--light;
     background-color: $text-color--main;
+    cursor: pointer;
+
+    &:hover{
+        border: 1px solid $text-color--main;
+        background-color: $text-color--light;
+        color: $text-color--main;
+    }
 
     @media (min-width: $mobile) and (max-width: $tablet){
         order: 3;
@@ -216,9 +227,11 @@
     border: 1px solid $limpid;
     border-radius: 50%;
     background: $text-color--main;
+    transition: 1s;
 
     &:hover{
-        border: 1px solid #ff0000
+        border: 1px solid $text-color--light;
+        transform: scale(1.2);
     }
 
     @media (max-width: $mobile) {

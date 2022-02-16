@@ -345,6 +345,7 @@
     margin-bottom: 36px;
     margin-right: 200px;
     color: $text-color--gray;
+    cursor: pointer;
 
     &:last-child{
         width: 98px;
@@ -353,6 +354,10 @@
 
     &:hover{
         color: $text-color--light;
+
+        .steps-goal-list__number-step {
+            border-bottom: 2px solid #E3B873;
+        }
     }
 }
 

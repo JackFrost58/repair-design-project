@@ -98,6 +98,9 @@ $limpid: transparent;
     border-left: 0;
     border-bottom: 1px solid rgba(54, 54, 54, 0.3);
     
+    &:focus{
+        outline: none;
+    } 
 
     &::placeholder { 
         @include font($font-FBC, 18px, 20px, none);
